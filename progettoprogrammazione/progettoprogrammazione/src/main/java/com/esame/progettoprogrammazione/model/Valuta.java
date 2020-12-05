@@ -1,19 +1,43 @@
 package com.esame.progettoprogrammazione.model;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+
 public class Valuta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private int denaro;
-    private String valutainiziale;
-    private String valutafinale;
+    private int valoreIniziale;
+    private String valutaIniziale;
+    private String valutaFinale;
+
+    public int getValoreIniziale() {
+        return valoreIniziale;
+    }
+
+    public void setValoreIniziale(int valoreIniziale) {
+        this.valoreIniziale = valoreIniziale;
+    }
+
+
+    public String getValutaIniziale() {
+        return valutaIniziale;
+    }
+
+    public void setValutaIniziale(String valutaIniziale) {
+        this.valutaIniziale = valutaIniziale;
+    }
+
+    public String getValutaFinale() {
+        return valutaFinale;
+    }
+
+    public void setValutaFinale(String valutaFinale) {
+        this.valutaFinale = valutaFinale;
+    }
 
     public long getId() {
         return id;
@@ -22,30 +46,4 @@ public class Valuta {
     public void setId(long id) {
         this.id = id;
     }
-
-    public int getDenaro() {
-        return denaro;
-    }
-
-    public String getValutainiziale() {
-        return valutainiziale;
-    }
-
-    public String getValutafinale() {
-        return valutafinale;
-    }
-
-    public void setDenaro(int denaro) {
-        this.denaro = denaro;
-    }
-
-    public void setValutainiziale(String valutainiziale) {
-        this.valutainiziale = valutainiziale;
-    }
-
-    public void setValutafinale(String valutafinale) {
-        this.valutafinale = valutafinale;
-    }
-    
-    
 }
